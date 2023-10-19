@@ -47,7 +47,7 @@ jobs:
         docker rmi `docker images -q`
         echo "Deleting files, please wait ..."
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /etc/mysql /etc/php
-        sudo apt -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
+        sudo apt purge -y azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
         sudo apt -qq autoremove --purge -y
         sudo apt -qq update
         echo "Installing dependency packages,then setting the workbench ..."
